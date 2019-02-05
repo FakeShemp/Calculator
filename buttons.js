@@ -4,6 +4,9 @@
 
 //Adding an eventlistener on buttons 'click', call for a function
 $('.btn').on('click', writeNumbers)
+$('#timer').on('click', startTimer)
+$('#stop').on('click', stopTimer)
+$('#reset').on('click', resetTimer)
 
 //Some keycodes translations
 const CODES = {
@@ -49,8 +52,34 @@ function writeNumbers() {
 
 }
 
+//Start timer
+function startTimer() {
+    $('#timer').hide()
+    $('#stop').show()
+    $('#reset').hide()
+    time = 1
+    timer = setInterval(function () {
+        $('#timeoutput').text(time++)
+    }, 1000)
+
+}
+
+//Stop timer
+function stopTimer() {
+    clearInterval(timer);
+    $('#stop').hide()
+    $('#reset').show()
+}
+
+//Reset timer
+function resetTimer() {
+    startTimer()
+}
+
+
 //Adding event listener on clear button that calls for a function that resets the output
 $('#clear').on('click', clear)
 function clear() {
     $('#numbers').text('')
 }
+

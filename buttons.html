@@ -6,11 +6,16 @@
     <title>Calc</title>
     <meta charset="utf-8">
     <style>
-        #numbers {
+        #numbers, #timeoutput {
             border: solid 1px black;
             height: 30px;
             width: 70px;
         }
+
+        #stop, #reset {
+            display: none;
+        }
+
     </style>
 </head>
 
@@ -32,7 +37,12 @@
     <button value="0" class="btn" id="zero">0</button>
     <br>
     <button id="clear">Clear</button>
-
+    <br>
+    <br>
+    <button id="timer">Start timer</button>
+    <button id="stop">Stop timer</button>
+    <button id="reset">Reset timer</button>
+    <div id="timeoutput"></div>
     <script src="buttons.js"></script> 
 </body>
 
