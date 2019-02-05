@@ -91,4 +91,3 @@ function clear() {
     $('#numbers').text('')
 }
 
-//Create a variable with 0, when time is 60, increase 0, and refer to function
