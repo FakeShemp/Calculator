@@ -61,7 +61,7 @@ function calculate() {
 }
 function evaluateOutput(s) {
     try {
-        return eval(s.slice(0, -1));
+        return eval(s);
     }
     catch (err) {
         return "ERROR";
