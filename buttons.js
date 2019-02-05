@@ -58,10 +58,16 @@ function startTimer() {
     $('#stop').show()
     $('#reset').hide()
     time = 1
+    minute = 0
     timer = setInterval(function () {
-        $('#timeoutput').text(time++)
+        if (time == 60) {
+            minute++
+            $('#minutes').text(minute)
+            time = 1
+        }
+        $('#seconds').text(time++)
     }, 1000)
-
+   
 }
 
 //Stop timer
@@ -74,6 +80,8 @@ function stopTimer() {
 //Reset timer
 function resetTimer() {
     startTimer()
+    $('#minutes').text('0')
+    $('#seconds').text('0')
 }
 
 
@@ -83,3 +91,4 @@ function clear() {
     $('#numbers').text('')
 }
 
+//Create a variable with 0, when time is 60, increase 0, and refer to function
