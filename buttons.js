@@ -57,10 +57,15 @@ function clear() {
 
 $('#equals').on('click', calculate);
 function calculate() {
-    evaluateOutput($('#numbers').text());
-    clear();
+    $('#numbers').text(evaluateOutput($('#numbers').text()));
 }
 function evaluateOutput(s) {
-    let result = eval(s.slice(0, -1));
-    console.log(result);
+    try {
+        return eval(s.slice(0, -1));
+      }
+      catch(err) {
+        return "ERROR";
+      }
+
+    
 }
