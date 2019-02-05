@@ -54,3 +54,9 @@ $('#clear').on('click', clear)
 function clear() {
     $('#numbers').text('')
 }
+
+$('#equals').on('click', calculate);
+function calculate() {
+    console.log("Final sum calculated");
+    clear();
+}
