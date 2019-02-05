@@ -57,6 +57,10 @@ function clear() {
 
 $('#equals').on('click', calculate);
 function calculate() {
-    console.log("Final sum calculated");
+    evaluateOutput($('#numbers').text());
     clear();
+}
+function evaluateOutput(s) {
+    let result = eval(s.slice(0, -1));
+    console.log(result);
 }
