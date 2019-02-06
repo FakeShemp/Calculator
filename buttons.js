@@ -61,5 +61,5 @@ function clear() {
 $('#equals').on('click', calculate);
 function calculate() {
     let input = $('#numbers').text();
-    $('#numbers').text(equalButton.calculate('input'));
+    $('#numbers').text(equalButton.calculate(input));
 }
