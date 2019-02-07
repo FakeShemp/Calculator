@@ -38,6 +38,10 @@ $('html').keyup(function () {
     } else if (event.shiftKey == true && event.keyCode == 191) {
         $('#numbers').append('*')
     }
+    else if (event.shiftKey == true && event.keyCode == 48) {
+        calculate();
+    }
+
     //If the shiftkey is not pressed
     if (CODES[event.keyCode] && event.shiftKey == false) {
         $('#numbers').append(CODES[event.keyCode]);
@@ -45,8 +49,6 @@ $('html').keyup(function () {
     else if (event.keyCode == 82) {
         $('#numbers').text('');
     }
-
-
 });
 
 
