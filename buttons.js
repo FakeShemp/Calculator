@@ -55,13 +55,14 @@ function writeNumbers() {
 }
 
 //Start timer
+let timer;
 function startTimer() {
     $('#timer').hide()
     $('#stop').show()
     $('#reset').hide()
     let time = 1
     let minute = 0
-    let timer = setInterval(function () {
+    timer = setInterval(function () {
         if (time == 60) {
             minute++
             $('#minutes').text(minute)
