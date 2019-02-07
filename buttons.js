@@ -59,9 +59,9 @@ function startTimer() {
     $('#timer').hide()
     $('#stop').show()
     $('#reset').hide()
-    time = 1
-    minute = 0
-    timer = setInterval(function () {
+    let time = 1
+    let minute = 0
+    let timer = setInterval(function () {
         if (time == 60) {
             minute++
             $('#minutes').text(minute)
