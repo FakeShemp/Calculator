@@ -41,7 +41,9 @@ $('html').keyup(function () {
     //If the shiftkey is not pressed
     if (CODES[event.keyCode] && event.shiftKey == false) {
         $('#numbers').append(CODES[event.keyCode]);
-
+    }
+    else if (event.keyCode == 82) {
+        $('#numbers').text('');
     }
 
 
