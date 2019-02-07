@@ -1,3 +1,5 @@
+import equalButton from './equals.js'
+
 //User story 1: Clickable buttons that writes out 0-9
 //User story 2: Clear numbers
 //User story 3: Keypressed numbers 0-9 /*+-
@@ -53,4 +55,11 @@ function writeNumbers() {
 $('#clear').on('click', clear)
 function clear() {
     $('#numbers').text('')
+}
+
+// Equals button
+$('#equals').on('click', calculate);
+function calculate() {
+    let input = $('#numbers').text();
+    $('#numbers').text(equalButton.calculate(input));
 }
