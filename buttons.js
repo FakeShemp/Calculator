@@ -6,6 +6,9 @@ import equalButton from './equals.js'
 
 //Adding an eventlistener on buttons 'click', call for a function
 $('.btn').on('click', writeNumbers)
+$('#timer').on('click', startTimer)
+$('#stop').on('click', stopTimer)
+$('#reset').on('click', resetTimer)
 
 //Some keycodes translations
 const CODES = {
@@ -51,11 +54,45 @@ function writeNumbers() {
 
 }
 
+//Start timer
+function startTimer() {
+    $('#timer').hide()
+    $('#stop').show()
+    $('#reset').hide()
+    time = 1
+    minute = 0
+    timer = setInterval(function () {
+        if (time == 60) {
+            minute++
+            $('#minutes').text(minute)
+            time = 1
+        }
+        $('#seconds').text(time++)
+    }, 1000)
+   
+}
+
+//Stop timer
+function stopTimer() {
+    clearInterval(timer);
+    $('#stop').hide()
+    $('#reset').show()
+}
+
+//Reset timer
+function resetTimer() {
+    startTimer()
+    $('#minutes').text('0')
+    $('#seconds').text('0')
+}
+
+
 //Adding event listener on clear button that calls for a function that resets the output
 $('#clear').on('click', clear)
 function clear() {
     $('#numbers').text('')
 }
+
 
 // Equals button
 $('#equals').on('click', calculate);
@@ -63,3 +100,4 @@ function calculate() {
     let input = $('#numbers').text();
     $('#numbers').text(equalButton.calculate(input));
 }
+

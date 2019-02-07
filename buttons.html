@@ -11,6 +11,16 @@
             height: 30px;
             width: 70px;
         }
+
+        #stop, #reset {
+            display: none;
+        }
+        
+        #timeoutput {
+            display: block;
+        }
+        
+
     </style>
 </head>
 
@@ -37,7 +47,13 @@
     <br>
     <button id="clear">Clear</button>
     <button id="equals">=</button>
-
+    <br>
+    <br>
+    <button id="timer">Start timer</button>
+    <button id="stop">Stop timer</button>
+    <button id="reset">Reset timer</button>
+    <div id="timeoutput"><br>Minutes:<p id="minutes"></p>Seconds:<p id="seconds"></p>
+    </div>
     <script type="module" src="buttons.js"></script> 
     <script type="module" src="equals.js"></script>
 </body>
