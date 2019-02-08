@@ -1,6 +1,7 @@
 let equalButton = {
     calculate(s) {
         let str = this.replaceXWithAsterisk(s);
+        str = this.replaceCheckWithMath(str);
         if (this.stringIsParsable(str)) {
             return eval(str);
         }
@@ -26,6 +27,12 @@ let equalButton = {
     // so replace with asterisks
     replaceXWithAsterisk(s) {
         return s.replace('x', '*');
+    },
+
+    //Square Root functionality
+    replaceCheckWithMath(s) {
+        let stuff = s.replace('√', 'Math.sqrt(');
+        return stuff+')';
     }
 }
 
