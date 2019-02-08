@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    background: #100a1c;
+    background-image:
+      radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+      radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+    background-attachment: fixed;
+    color: #6cacc5;
+  }
+
+  #numbers {
+    color: #c97874;
+    line-height: 3em;
+    text-align: right;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 13.4em;
+    height: 3em;
+    font-family: 'Patua One', cursive;
+    font-size: 2em;
+  }
+
+  button {
+    border: 0;
+    cursor: pointer;
+    float: left;
+    font-family: 'Patua One', cursive;
+    font-size: 1.5em;
+    margin: 0.25em;
+    width: 4.3em;
+    height: 4.3em;
+    transition: all 0.5s;
+    opacity: 1;
+  }
+
+  .rdn {
+    font-family: 'Patua One', cursive;
+    font-size: 1.5em;
+    background: transparent;
+    color:  #6cacc5;
+  }
+
+  #timer {
+    background: #518d68;
+  }
+
+  #stop {
+    background: #883232;
+  }
+
+  #reset {
+    background: #8d8451;
+  }
+
+  #timeoutput {
+      background: transparent;
+  }
+
+  .num {
+    background: rgba(64, 83, 231, 0.342);
+    color: #6cacc5;
+  }
+
+  .math {
+    background: rgba(87, 154, 255, 0.342);
+    color: #6cacc5;
+  }
+
+  #clear {
+    background: #361f49;
+    color: #6cacc5;
+  }
+
+.flexit {
+    display: flex;
+    flex-flow: row;
+}
+
+ #clear:hover, button:hover {
+    background: #c97874;
+    color: #7dcae9;
+    opacity: 1.2;
+  }
+
+  
