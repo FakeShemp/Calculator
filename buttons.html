@@ -5,62 +5,72 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Calc</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <style>
-        #numbers {
-            border: solid 1px black;
-            height: 30px;
-            width: 70px;
-        }
-
-        #stop, #reset {
+        #stop,
+        #reset {
             display: none;
         }
-        
+
         #timeoutput {
             display: block;
         }
-        
-
     </style>
 </head>
 
 <body>
-    <div id="numbers"></div>
-    <br>
-    <button value="7" class="btn" id="seven">7</button>
-    <button value="8" class="btn" id="eight">8</button>
-    <button value="9" class="btn" id="nine">9</button>
-    <br>
-    <button value="4" class="btn" id="four">4</button>
-    <button value="5" class="btn" id="five">5</button>
-    <button value="6" class="btn" id="six">6</button>
-    <br>
-    <button value="1" class="btn" id="one">1</button>
-    <button value="2" class="btn" id="two">2</button>
-    <button value="3" class="btn" id="three">3</button>
-    <br>
-    <button value="0" class="btn" id="zero">0</button>
-    <button value=" / " class="btn" id="divide">/</button>
-    <button value=" x " class="btn" id="multiply">x</button>
-    <button value=" - " class="btn" id="substract">-</button>
-    <button value=" + " class="btn" id="add">+</button>
-    <button value=" √ " class="btn" id="square">√</button>
-    <button value=" ( " class="btn" id="leftparen">(</button>
-    <button value=" ) " class="btn" id="rightparen">)</button>
-    <button class="btn" id="ce">CE</button>
+    <div class="center">
+        <div id="numbers"></div>
+        <br>
+        <div class="row6 flexit">
+            <button id="timer" class="math">Start timer</button>
+            <button id="stop" class="math">Stop timer</button>
+            <button id="reset" class="math">Reset timer</button>
+            <div id="timeoutput" class="math"><button class="rdn">Minutes:<p id="minutes">0</p></button><button
+                    class="rdn">Seconds:<p id="seconds">0</p></button>
+                <button class="btn math" id="ce">CE</button>
+            </div>
+        </div>
+        <br>
+        <div class="row1 flexit">
+            <button value=" √ " class="btn math" id="square">√</button>
+            <button value=" ( " class="btn math" id="leftparen">(</button>
+            <button value=" ) " class="btn math" id="rightparen">)</button>
+            <button value=" / " class="btn math" id="divide">/</button>
+        </div>
 
-    <br>
-    <button id="clear">Clear</button>
-    <button value="." class="btn" id="dot">.</button>
-    <button id="equals">=</button>
-    <br>
-    <br>
-    <button id="timer">Start timer</button>
-    <button id="stop">Stop timer</button>
-    <button id="reset">Reset timer</button>
-    <div id="timeoutput"><br>Minutes:<p id="minutes">0</p>Seconds:<p id="seconds">0</p>
+        <div class="row2 flexit">
+            <button value="7" class="btn num" id="seven">7</button>
+            <button value="8" class="btn num" id="eight">8</button>
+            <button value="9" class="btn num" id="nine">9</button>
+            <button value=" x " class="btn math" id="multiply">x</button>
+        </div>
+
+        <div class="row3 flexit">
+            <button value="4" class="btn num" id="four">4</button>
+            <button value="5" class="btn num" id="five">5</button>
+            <button value="6" class="btn num" id="six">6</button>
+            <button value=" - " class="btn math" id="substract">-</button>
+        </div>
+
+        <div class="row4 flexit">
+            <button value="1" class="btn num" id="one">1</button>
+            <button value="2" class="btn num" id="two">2</button>
+            <button value="3" class="btn num" id="three">3</button>
+            <button value=" + " class="btn math" id="add">+</button>
+        </div>
+
+        <div class="row5 flexit">
+            <button value="0" class="btn num" id="zero">0</button>
+            <button value="." class="btn math" id="dot">.</button>
+            <button id="equals" class="math">=</button>
+            <button id="clear">Clear</button>
+        </div>
+        <br>
+
     </div>
-    <script type="module" src="buttons.js"></script> 
+    <script type="module" src="buttons.js"></script>
     <script type="module" src="equals.js"></script>
 </body>
 
