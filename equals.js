@@ -32,6 +32,9 @@ let equalButton = {
     //Square Root functionality
     replaceCheckWithMath(s) {
         let stuff = s.replace('√', 'Math.sqrt(');
+        if (!s.includes('√')) {
+            return s;
+        }
         return stuff+')';
     }
 }
