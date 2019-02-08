@@ -107,3 +107,9 @@ function calculate() {
     $('#numbers').text(equalButton.calculate(input));
 }
 
+// CE button
+$('#ce').on('click', undo);
+function undo() {
+    let input = $('#numbers').text();
+    $('#numbers').text(input.slice(0,-1));
+}
